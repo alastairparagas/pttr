@@ -12,7 +12,7 @@
                     </div>
                     <div id="viewport">
                         <div class="row">
-                            <div class="col-sm-3 " ng-repeat="animal in animal">
+                            <div class="col-sm-3 " ng-repeat="animal in animals">
                                 <div class="thumbnail ">
                                     <img class="img-rounded" src="img/thumbnail-3.jpg">
                                     <div class="caption text-center">
@@ -27,8 +27,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -42,12 +40,11 @@
                                 <hr>
                                 <div class="listofPledges">
                                     <ul>
-                                        <li>
-                                            <h5><strong>{{username}}</strong></h5>
-                                            <h5>{{pledgetype}}</h5>
-                                            <h5>{{pledgeamount}}</h5>
+                                        <li ng-repeat="user in pledgeusers">
+                                            <h5><strong>{{user.username}}</strong></h5>
+                                            <h5>{{user.pledgetype}}</h5>
+                                            <h5>{{user.pledgeamount}}</h5>
                                         </li>
-
                                     </ul>
                                 </div>
                             </div>
@@ -62,12 +59,11 @@
                                 <hr>
                                 <div class="listofPledges">
                                     <ul>
-                                        <li>
-                                            <h5>{{username}}</h5>
-                                            <h5>{{AnimalName}}</h5>
-                                            <h5>{{AnimalType}}</h5>
+                                        <li ng-repeat="user in adopterusers">
+                                            <h5>{{user.username}}</h5>
+                                            <h5>{{user.animalName}}</h5>
+                                            <h5>{{user.animalType}}</h5>
                                         </li>
-
                                     </ul>
                                 </div>
                             </div>

@@ -52,6 +52,8 @@
                     position: relative;
                     list-style: none;
                     @include marginLR(2%);
+                    border: 1px solid black;
+                    padding: 2%;
                 }
                 li:first-child {
                     margin-left: 0px;

@@ -1,0 +1,18 @@
+.footCust {
+    background-color: #1E5699;
+    color: #EEF3F7;
+    @include paddingTB(2%);
+    .txt_blk {
+        margin-top: 10%;
+        p {
+            text-align: center;
+        }
+    }
+    li {
+        list-style: none;
+    }
+    .navCust {
+        background-color: #EEF3F7;
+        box-shadow: 0 20px 10px rgba(0, 0, 0, 0.19), 0 3px 1px rgba(0, 0, 0, 0.23)
+    }
+}

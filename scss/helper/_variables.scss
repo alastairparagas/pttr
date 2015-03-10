@@ -1,25 +1,85 @@
-%flexCenter{
-	display: flex;
-	justify-content: center;
+//colors for website
+$base-color:#3A5795; //dark blue
+$accent-color:#2D81E5; //accent blue
+$base-color-two:#CEDBF0; //base grey
+$accent-color-two:#E4E9F7; // accent grey
+$white-color:#EEF3F7; //white
+
+
+%flexCenter {
+    display: flex;
+    justify-content: center;
 }
-%border_box{
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
+
+%border_box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
 }
-%boxKit{
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-box;
-	display: -o-box;
-	display: box;
+
+%boxKit {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: -o-box;
+    display: box;
 }
-%inlineBox{
-	display: -webkit-inline-box;
-	display: -moz-inline-box;
-	display: -ms-inline-box;
-	display: -o-inline-box;
-	display: inline-box;
+
+%inlineBox {
+    display: -webkit-inline-box;
+    display: -moz-inline-box;
+    display: -ms-inline-box;
+    display: -o-inline-box;
+    display: inline-box;
 }
+
+%button {
+    background-color:$base-color;
+    color: #DBE9EE;
+    margin-top: 2%;
+    margin-bottom: 30%;
+    &:hover {
+        background-color:$accent-color;
+        color: $white-color;
+    }
+}
+
+%input{
+	margin-bottom: 2%;
+	border: 2px solid $accent-color-two;
+	&:hover {
+		border:2px solid $accent-color;
+	}
+}
+%infoBlocks{
+	 @include paddingLR(7%);
+        p, li {
+        	list-style:none;
+            text-align: justify;
+            color: $base-color;
+            margin-bottom: 10px;
+        }
+        h5, h4{
+        	text-align:center;
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

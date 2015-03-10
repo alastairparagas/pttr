@@ -8,30 +8,17 @@
             text-align:justify;
             color:#1E5699;
         }
-        .btn_blk {
-            display: flex;
-            justify-content: center;
-            padding-top: 5%;
-            .btn {
-                background-color: #1E5699;
-                color: #DBE9EE;
-                margin-bottom: 10%;
+        .btn{
+          @extend %button;
+            &:nth-child(0){
+                margin-left:2%;
             }
-            .btn:hover {
-                background-color: #2D81E5;
-                color: #EEF3F7;
-                margin-bottom: 10%;
-            }
-            .btn:nth-child(0){
-                margin-left:5%;
-            }
-            .btn:nth-child(1){
-                margin-right:5%;
+            &:nth-child(1){
+                margin-right:2%;
             }
         }
-        input[text], textarea {
-            margin-bottom: 20px;
-            resize: none;
+        input, textarea {
+           @extend %input;
         }
         .col-sm-12{
         @include paddingLR(20%);

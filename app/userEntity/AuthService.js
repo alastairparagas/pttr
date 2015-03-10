@@ -180,6 +180,7 @@
                 firebaseRef: null,
                 type: null
             };
+            window.sessionStorage.clear();
         };
         
         /**

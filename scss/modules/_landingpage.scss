@@ -8,10 +8,25 @@ body a, body a:active, body a:visited {
 body a:hover {
     color: white;
 }
+
+//global styles are used throughout th landing page
 section {
     position: relative;
     width: 100%;
 }
+.mainContent {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.header_blk {
+    h1 {
+        text-align: center;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+}
+//global styles end
+
+//landing section begins
 #landing {
     background: url('../images/landingGif.gif')center center no-repeat;
     @include background-size(cover);
@@ -57,6 +72,9 @@ section {
         }
     }
 }
+//landing section ends
+
+//mission section begins
 #mission {
     .pg_img_blk {
         @include SameWidthHeight(100%);
@@ -68,6 +86,9 @@ section {
         @include border-radius(50%);
     }
 }
+//mission section ends
+
+//pttrInfo section begins
 #pttrInfo {
     .containerPttr {
         overflow: none;
@@ -93,6 +114,9 @@ section {
     background-color: $base-color;
     color: white;
 }
+//pttrInfo Section ends
+
+//signUp section begins
 #signUp {
     min-height: 300px;
     .subCont {
@@ -127,16 +151,9 @@ section {
         }
     }
 }
-.mainContent {
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
-.header_blk {
-    h1 {
-        text-align: center;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    }
-}
+//signUp section ends
+
+//not sure what the hell this is
 #searchPreference {
     padding-top: 10%;
     .header_blk {
@@ -150,17 +167,4 @@ section {
     .question_blk {
         width: 100%;
     }
-}
-.left {
-    background-color: $base-color;
-    color: $base-color-two;
-}
-.right {
-    background-color: yellow;
-}
-navCust {
-    margin-botton: 0;
-}
-.right {
-    background-color: white;
 }

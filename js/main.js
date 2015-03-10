@@ -21,7 +21,7 @@ var wow = new WOW({
 wow.init();
 $(document).ready(function() {
     $(function() {
-        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="tooltip"]').tooltip();
     })
 });
 //Maps api variables
@@ -80,3 +80,82 @@ $(document).ready(function() {
     navigator.geolocation.getCurrentPosition(initialize);
 
 });
+
+
+
+
+
+;(function() {
+    var App,
+        __bind  = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+
+    App = (function() {
+        function App() {
+            this.build();
+            $('[data-toggle="tooltip"]').tooltip();
+        }
+
+        App.prototype.build = function(){
+            //initializes map to general location
+            map  = new GMaps({
+                div: '#map-canvas',
+                zoom: 12,
+                lat: 18.6803268,
+                lng: -72.4541563
+            });
+
+            this.geolocate();
+
+            smoothScroll.init({
+                speed: 1000,
+                easing: 'easeInOutCubic',
+                offset: 0,
+                updateURL: true,
+                callbackBefore: function(toggle, anchor) {},
+                callbackAfter: function(toggle, anchor) {}
+            });
+            new WOW({
+                boxClass: 'wow', // animated element css class (default is wow)
+                animateClass: 'animated', // animation css class (default is animated)
+                duration: 14, //duration of chosen animation
+                offset: 200, // distance to the element when triggering the animation (default is 0)
+            }).init();
+        }
+
+        App.prototype.geolocate = function(){
+            var loc,
+                _this = this;
+
+            GMaps.geolocate({
+              success: function(position) {
+                loc = position;
+
+                map.setCenter(position.coords.latitude, position.coords.longitude);
+                map.addMarker({
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                    infoWindow: {
+                        content: '<div class="overlay">You are Here!</overlay>'
+                    }
+                });
+              },
+                error: function(error) {
+                    alert('Geolocation failed: '+error.message);
+                },
+                not_supported: function() {
+                    alert("Your browser does not support geolocation");
+                }
+            });
+        }
+
+        // implements tehthe searching
+        App.prototype.search = function(address){}
+
+        return App;
+
+    })();
+
+    $(function() {
+        return App = new App();
+    });
+}).call(this);

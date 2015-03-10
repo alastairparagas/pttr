@@ -48,9 +48,9 @@ $white-color:#EEF3F7; //white
 
 %input{
 	margin-bottom: 2%;
-	border: 2px solid $accent-color-two;
+	border: 1px solid $accent-color-two;
 	&:hover {
-		border:2px solid $accent-color;
+		border:1px solid $accent-color;
 	}
 }
 %infoBlocks{
@@ -65,21 +65,3 @@ $white-color:#EEF3F7; //white
         	text-align:center;
         }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

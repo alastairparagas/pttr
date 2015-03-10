@@ -37,66 +37,66 @@
 }
 
 nav.navbar.nvclass {
-    border-bottom: solid 2px #CEDBF0;
+    border-bottom: solid 2px $base-color-two;
 }
 .navbar {
     position: fixed;
     top: 0;
     background-color: white;
-    border: solid 1px #CEDBF0;
+    border: solid 1px $base-color-two;
     z-index: 100;
     width: 100%;
     @include border-radius(0);
 }
 .navbar-default .navbar-text, .navbar-default .navbar-nav>li>a {
-    color: #1E5699;
+    color: $base-color;
     text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 .navbar-default .navbar-brand, .navbar-default .navbar-link, .navbar-default .btn-link {
-    color: #1E5699;
+    color: $base-color;
     text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     text-align: center;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-link:hover, .navbar-default .btn-link:hover {
-    color: #2D81E5;
+    color: $accent-color;
     text-align: center;
 }
 .navbar-default .navbar-text, .navbar-default .navbar-nav>li>a {
-    color: #2D81E5;
+    color: $accent-color;
 }
 .navbar-default .navbar-toggle, .navbar-default .navbar-toggle:focus {
-    background-color: #1E5699;
-    border-color: #2D81E5;
+    background-color: $base-color;
+    border-color: $accent-color;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background-color: #1E5699;
-    border-color: #2D81E5;
+    background-color: $base-color;
+    border-color: $accent-color;
 }
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #2D81E5;
+    background-color: $accent-color;
 }
 .navbar-default .navbar-text, .navbar-default .navbar-nav>li>a {
-    color: #1E5699;
+    color: $base-color;
 }
 .navbar-default .navbar-text, .navbar-default .navbar-nav>li>a {
-    color: #2D81E5;
+    color: $accent-color;
 }
 .navbar-default .navbar-toggle, .navbar-default .navbar-toggle:focus {
-    background-color: #1E5699;
-    border-color: #2D81E5;
+    background-color: $base-color;
+    border-color: $accent-color;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background-color: #1E5699;
-    border-color: #2D81E5;
+    background-color: $base-color;
+    border-color: $accent-color;
 }
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #2D81E5;
+    background-color: $accent-color;
 }
 .navbar-default .navbar-text, .navbar-default .navbar-nav>li>a {
-    color: #1E5699;
+    color: $base-color;
 }
 .navbar-default .navbar-text, .navbar-default .navbar-nav>li>a:hover {
-    color: #2D81E5;
+    color: $accent-color;
 }
 
 .navCust{

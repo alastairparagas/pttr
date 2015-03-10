@@ -3,7 +3,7 @@
         <h1> <span class="glyphicon glyphicon-pencil"></span> User Sign Up</h1>
         <form>
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-6 txt_blk">
                     <h4 class="">Your Sensitive Information</h4>
                     <li>
                         The Information that you provide to us is sensitive. Pttr is committed to your privacy and we take extreme precautions to protect your information.
@@ -47,10 +47,7 @@
                 </div>
 
                 <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="biography">Biography</label>
-                        <textarea disable="{{isDisable}}" class="form-control" name="biography" id="biography" placeholder="Tell us about yourself..." ng-model="edit.data.biography" maxlength="140"></textarea>
-                    </div>
+
                     <div class="btn_blk">
                         <button ng-submit() class="btn btn-lg">Sign Up</button>
                     </div>

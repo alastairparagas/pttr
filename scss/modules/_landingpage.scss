@@ -3,7 +3,7 @@ body, html {
     height: 100%;
 }
 body a, body a:active, body a:visited {
-    color: #CEDBF0;
+    color: $base-color-two;
 }
 body a:hover {
     color: white;
@@ -12,67 +12,66 @@ section {
     position: relative;
     width: 100%;
 }
-.mainContent {
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
 #landing {
     background: url('../images/landingGif.gif')center center no-repeat;
     @include background-size(cover);
     @include SameWidthHeight(100%);
-}
-.overlay {
-    @include overlay(213, 67%, 36%, 0.34);
-    @include SameWidthHeight(100%);
-    position: relative;
-}
-.landingContainer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    .arrow {
-        width: 100px;
-        height: 100px;
-        text-align: center;
-        border: solid 2px #CEDBF0;
-        border-radius: 50%;
-        .glyphicon-chevron-down {
-            font-size: 76px;
-            margin-top: 15px;
-            margin-left: auto;
-            margin-right: auto;
+    .overlay {
+        @include overlay(213, 67%, 36%, 0.34);
+        @include SameWidthHeight(100%);
+        position: relative;
+    }
+    .landingContent {
+        position: absolute;
+        top: 25%;
+        width: 100%;
+        h1, h2 {
             text-align: center;
-            margin-right: 5.5px;
+            color: $base-color-two;
+        }
+        .logo {
+            height: 100px;
+            width: 100px;
+        }
+    }
+    .landingContainer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .arrow {
+            width: 85px;
+            height: 85px;
+            text-align: center;
+            border: solid 2px $base-color-two;
+            border-radius: 50%;
+            .glyphicon-chevron-down {
+                font-size: 56px;
+                margin-top: 15px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                margin-right: 5.5px;
+            }
         }
     }
 }
-.landingContent {
-    position: absolute;
-    top: 25%;
-    width: 100%;
-    h1, h2 {
-        text-align: center;
-        color: #CEDBF0;
+#mission {
+    .pg_img_blk {
+        @include SameWidthHeight(100%);
+        @extend %flexCenter;
+        padding-top: 5%;
     }
-}
-.pg_img_blk {
-    @include SameWidthHeight(100%);
-    @extend %flexCenter;
-    padding-top: 5%;
-}
-.imgCust {
-    @include SameWidthHeight(270px);
-    @include border-radius(50%);
-}
-.header_blk {
-    h1 {
-        text-align: center;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    .imgCust {
+        @include SameWidthHeight(270px);
+        @include border-radius(50%);
     }
 }
 #pttrInfo {
+    .containerPttr {
+        overflow: none;
+    }
     .header_blk {
         h1 {
             text-align: center;
@@ -91,37 +90,52 @@ section {
         @include paddingLR(4%);
         text-align: justify;
     }
+    background-color: $base-color;
+    color: white;
 }
-#sign_Btn_Blk {
-    width: 100%;
-    @extend %flexCenter;
-    .btn {
-        width: 30%;
-        font-size: 2em;
+#signUp {
+    min-height: 300px;
+    .subCont {
+        p {
+            padding: 5%;
+            text-align: center;
+        }
+        @include paddingLR(20%);
     }
-    .orgButton {
-        background-color: #1E5699;
-        color: white;
-    }
-    .orgButton:hover {
-        background-color: #2D81E5;
-        color: white;
-    }
-    a:last-child {
-        background-color: white;
-        color: #1E5699;
-    }
-    a:last-child:hover {
-        background-color: #2D81E5;
-        color: white;
+    .sign_Btn_Blk {
+        width: 100%;
+        @extend %flexCenter;
+        .btn {
+            width: 30%;
+            font-size: 2em;
+        }
+        .orgButton {
+            background-color: $base-color;
+            color: white;
+        }
+        .orgButton:hover {
+            background-color: $accent-color;
+            color: white;
+        }
+        a:last-child {
+            background-color: white;
+            color: $base-color;
+        }
+        a:last-child:hover {
+            background-color: $accent-color;
+            color: white;
+        }
     }
 }
-.subCont {
-    p {
-        padding: 5%;
+.mainContent {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.header_blk {
+    h1 {
         text-align: center;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     }
-    @include paddingLR(20%);
 }
 #searchPreference {
     padding-top: 10%;
@@ -138,34 +152,15 @@ section {
     }
 }
 .left {
-    background-color: #1E5699;
-    color: #CEDBF0;
+    background-color: $base-color;
+    color: $base-color-two;
 }
 .right {
     background-color: yellow;
 }
-#pttrInfo {
-    background-color: #1E5699;
-    color: white;
-}
 navCust {
     margin-botton: 0;
-}
-.logo {
-    height: 100px;
-    width: 100px;
 }
 .right {
     background-color: white;
 }
-.logo {
-    height: 100px;
-    width: 100px;
-}
-#signUp {
-    min-height: 300px;
-}
-.containerPttr {
-    overflow: none;
-}
-

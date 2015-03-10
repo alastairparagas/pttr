@@ -3,28 +3,26 @@
         h1 {
             text-align: center;
         }
-        li{
-            margin-bottom:15px;
-            text-align:justify;
-            color:#1E5699;
+        .txt_blk {
+            @extend %infoBlocks;
         }
-        .btn{
-          @extend %button;
-            &:nth-child(0){
-                margin-left:2%;
+        .btn {
+            @extend %button;
+            &:nth-child(0) {
+                margin-left: 2%;
             }
-            &:nth-child(1){
-                margin-right:2%;
+            &:nth-child(1) {
+                margin-right: 2%;
             }
         }
         input, textarea {
-           @extend %input;
+            @extend %input;
         }
-        .col-sm-12{
-        @include paddingLR(20%);
+        .col-sm-12 {
+            @include paddingLR(20%);
         }
-        img{
-        margin-bottom:50px;
+        img {
+            margin-bottom: 50px;
         }
     }
 }
